@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDemp", "AsyncDemp\AsyncDemp.csproj", "{71CC27BC-D875-4DE8-AAA2-A295DA0FAA76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncDemo", "AsyncDemp\AsyncDemo.csproj", "{71CC27BC-D875-4DE8-AAA2-A295DA0FAA76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slo-Mo", "Slo-Mo\Slo-Mo.csproj", "{3FBCB569-AA37-484F-A773-07C63BA6C384}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C8E73ADE-E0FD-410A-AE0E-921FF0FDA108}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\script.js = ..\..\..\script.js
+		..\..\..\scriptasync.js = ..\..\..\scriptasync.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,10 @@ Global
 		{71CC27BC-D875-4DE8-AAA2-A295DA0FAA76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71CC27BC-D875-4DE8-AAA2-A295DA0FAA76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71CC27BC-D875-4DE8-AAA2-A295DA0FAA76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

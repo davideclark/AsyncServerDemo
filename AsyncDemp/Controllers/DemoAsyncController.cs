@@ -12,11 +12,11 @@ namespace AsyncDemp.Controllers
     public class DemoAsyncController : Controller
     {
 		[HttpGet]
-		public async Task<string> Get()
+		public async Task<string> Get([FromQuery] int delay)
 		{
 			HttpClient httpClient = new HttpClient();
 			
-			var result = await httpClient.GetAsync(@"https://localhost:44343/weatherforecastasync");
+			var result = await httpClient.GetAsync(@"https://slo-mo.azurewebsites.net/WeatherForecastAsync?delay=" + delay);
 
 			return await result.Content.ReadAsStringAsync();
 		}

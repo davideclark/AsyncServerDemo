@@ -12,13 +12,13 @@ namespace AsyncDemp.Controllers
     public class DemoController : Controller
     {
 		[HttpGet]
-		public string Get()
+		public string Get([FromQuery]int delay)
 		{
 			HttpResponseMessage response;
 			HttpClient httpClient = new HttpClient();
 			try
 			{
-				response = httpClient.GetAsync(@"https://localhost:44343/weatherforecastAsync").Result;
+				response = httpClient.GetAsync(@"https://slo-mo.azurewebsites.net/WeatherForecastAsync?delay=" + delay).Result;
 			}
 			catch(Exception ex)
 			{
