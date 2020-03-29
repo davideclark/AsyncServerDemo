@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{C8E7
 		..\..\..\scriptasync.js = ..\..\..\scriptasync.js
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slo-MoUnitTests", "Slo-MoUnitTests\Slo-MoUnitTests.csproj", "{8F16142C-61F3-48CA-8CF4-4AA082737A6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FBCB569-AA37-484F-A773-07C63BA6C384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F16142C-61F3-48CA-8CF4-4AA082737A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F16142C-61F3-48CA-8CF4-4AA082737A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F16142C-61F3-48CA-8CF4-4AA082737A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F16142C-61F3-48CA-8CF4-4AA082737A6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
