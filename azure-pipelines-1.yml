@@ -34,3 +34,11 @@ steps:
     configuration: '$(buildConfiguration)'
 
     
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Windows Azure  MSDN - Visual Studio Premium(1)(3bebbc31-8aa5-4904-88c7-bc3fe93c49f6)'
+    appType: 'webApp'
+    WebAppName: 'Slo-Mo'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    JSONFiles: '**/appsettings.json'
