@@ -22,7 +22,7 @@ namespace Slo_MoUnitTests
 			int delay = 0;
 
 			IEnumerable<WeatherForecast> result = await weatherForecastAsyncController.Get(delay);
-
+			
 			Assert.NotNull(result);
 
 
