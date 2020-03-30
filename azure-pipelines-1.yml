@@ -22,21 +22,23 @@ steps:
     restoreSolution: '$(solution)'
 
 - task: VSBuild@1
-  inputs:    
+  inputs:
     solution: '$(solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    testRunTitle: 'Slo Mo Unit Tests'
-    
 
+    
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Windows Azure  MSDN - Visual Studio Premium(1)(3bebbc31-8aa5-4904-88c7-bc3fe93c49f6)'
+    appType: 'webApp'
+    WebAppName: 'Slo-Mo'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    JSONFiles: '**/appsettings.json'
